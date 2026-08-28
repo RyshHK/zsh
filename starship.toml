@@ -2,7 +2,32 @@
 
 add_newline = false
 
-format = "$directory$os$git_branch$git_status$nodejs$rust$golang$php $character"
+format = """
+$time\
+$username\
+$directory\
+$os\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$php\
+$character\
+"""
+
+# Ensure username is always shown
+[username]
+show_always = true
+style_user = "bold blue"
+format = "[ $user ]($style) "
+   
+# Enable and configure the time module
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute format (e.g., 14:30)
+style = "bold yellow"
+format = "[ 🕙 $time ]($style) "
 
 [os]
 disabled = false
