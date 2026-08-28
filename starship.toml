@@ -13,7 +13,7 @@ $nodejs\
 $rust\
 $golang\
 $php\
-$character\
+\n$character\
 """
 
 # Ensure username is always shown
