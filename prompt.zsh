@@ -7,7 +7,7 @@ FUNCNEST=100
 
 if [[ $(tty) == /dev/tty[0-9]* ]]; then
     PROMPT='%F{bright-grey}%T%f: %F{green}%~%f
-%F{yellow}%(?.>.#)%f '
+ %(?.%F{green}.%F{red})>%f '
 else
     eval "$(starship init zsh)"
 fi
